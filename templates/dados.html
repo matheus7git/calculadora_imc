@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dados de IMC</title>
+</head>
+<body>
+    <h1>Dados de IMC Registrados</h1>
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Peso</th>
+            <th>Altura</th>
+            <th>IMC</th>
+            <th>Status</th>
+        </tr>
+        {% for pessoa in dados %}
+        <tr>
+            <td>{{ pessoa[1] }}</td>
+            <td>{{ pessoa[2] }} kg</td>
+            <td>{{ pessoa[3] }} m</td>
+            <td>{{ pessoa[4] }}</td>
+            <td>{{ pessoa[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
